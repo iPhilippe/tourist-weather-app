@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B28844332DA1BD5A00058D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844322DA1BD5A00058D1F /* AppDelegate.swift */; };
+		B28844352DA1BD5A00058D1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844342DA1BD5A00058D1F /* SceneDelegate.swift */; };
+		B28844372DA1BD5A00058D1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844362DA1BD5A00058D1F /* ViewController.swift */; };
+		B288443C2DA1BD5B00058D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B288443B2DA1BD5B00058D1F /* Assets.xcassets */; };
+		B288443F2DA1BD5B00058D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B288443D2DA1BD5B00058D1F /* LaunchScreen.storyboard */; };
+		B28844662DA1C43300058D1F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844652DA1C42F00058D1F /* AppRouter.swift */; };
+		B28844722DA1C72F00058D1F /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288446F2DA1C72F00058D1F /* SceneFactory.swift */; };
+		B28844732DA1C72F00058D1F /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288446E2DA1C72F00058D1F /* MainFactory.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B28844462DA1BD5B00058D1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,29 +36,20 @@
 
 /* Begin PBXFileReference section */
 		B288442F2DA1BD5A00058D1F /* tourist-weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tourist-weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B28844322DA1BD5A00058D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B28844342DA1BD5A00058D1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B28844362DA1BD5A00058D1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B288443B2DA1BD5B00058D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B288443E2DA1BD5B00058D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B28844402DA1BD5B00058D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B28844452DA1BD5B00058D1F /* tourist-weather-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tourist-weather-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B288444F2DA1BD5B00058D1F /* tourist-weather-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tourist-weather-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B28844652DA1C42F00058D1F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		B288446E2DA1C72F00058D1F /* MainFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		B288446F2DA1C72F00058D1F /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B28844572DA1BD5B00058D1F /* Exceptions for "tourist-weather-app" folder in "tourist-weather-app" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = B288442E2DA1BD5A00058D1F /* tourist-weather-app */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B28844312DA1BD5A00058D1F /* tourist-weather-app */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B28844572DA1BD5B00058D1F /* Exceptions for "tourist-weather-app" folder in "tourist-weather-app" target */,
-			);
-			path = "tourist-weather-app";
-			sourceTree = "<group>";
-		};
 		B28844482DA1BD5B00058D1F /* tourist-weather-appTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "tourist-weather-appTests";
@@ -56,6 +58,16 @@
 		B28844522DA1BD5B00058D1F /* tourist-weather-appUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "tourist-weather-appUITests";
+			sourceTree = "<group>";
+		};
+		B28844712DA1C72F00058D1F /* Scenes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B288447D2DA1CCE000058D1F /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -88,7 +100,7 @@
 		B28844262DA1BD5A00058D1F = {
 			isa = PBXGroup;
 			children = (
-				B28844312DA1BD5A00058D1F /* tourist-weather-app */,
+				B288446D2DA1C6F500058D1F /* TouristWeatherApp */,
 				B28844482DA1BD5B00058D1F /* tourist-weather-appTests */,
 				B28844522DA1BD5B00058D1F /* tourist-weather-appUITests */,
 				B28844302DA1BD5A00058D1F /* Products */,
@@ -103,6 +115,24 @@
 				B288444F2DA1BD5B00058D1F /* tourist-weather-appUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B288446D2DA1C6F500058D1F /* TouristWeatherApp */ = {
+			isa = PBXGroup;
+			children = (
+				B28844322DA1BD5A00058D1F /* AppDelegate.swift */,
+				B28844652DA1C42F00058D1F /* AppRouter.swift */,
+				B28844342DA1BD5A00058D1F /* SceneDelegate.swift */,
+				B288446E2DA1C72F00058D1F /* MainFactory.swift */,
+				B288446F2DA1C72F00058D1F /* SceneFactory.swift */,
+				B288447D2DA1CCE000058D1F /* Models */,
+				B28844712DA1C72F00058D1F /* Scenes */,
+				B288443B2DA1BD5B00058D1F /* Assets.xcassets */,
+				B28844402DA1BD5B00058D1F /* Info.plist */,
+				B288443D2DA1BD5B00058D1F /* LaunchScreen.storyboard */,
+				B28844362DA1BD5A00058D1F /* ViewController.swift */,
+			);
+			path = TouristWeatherApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +151,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B28844312DA1BD5A00058D1F /* tourist-weather-app */,
+				B28844712DA1C72F00058D1F /* Scenes */,
+				B288447D2DA1CCE000058D1F /* Models */,
 			);
 			name = "tourist-weather-app";
 			packageProductDependencies = (
@@ -225,6 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B288443F2DA1BD5B00058D1F /* LaunchScreen.storyboard in Resources */,
+				B288443C2DA1BD5B00058D1F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28844662DA1C43300058D1F /* AppRouter.swift in Sources */,
+				B28844722DA1C72F00058D1F /* SceneFactory.swift in Sources */,
+				B28844372DA1BD5A00058D1F /* ViewController.swift in Sources */,
+				B28844732DA1C72F00058D1F /* MainFactory.swift in Sources */,
+				B28844332DA1BD5A00058D1F /* AppDelegate.swift in Sources */,
+				B28844352DA1BD5A00058D1F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +319,17 @@
 			targetProxy = B28844502DA1BD5B00058D1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B288443D2DA1BD5B00058D1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B288443E2DA1BD5B00058D1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B28844592DA1BD5B00058D1F /* Debug */ = {
