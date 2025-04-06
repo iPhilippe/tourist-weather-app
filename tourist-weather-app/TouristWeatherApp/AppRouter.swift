@@ -14,7 +14,7 @@ final class AppRouter: ObservableObject {
     init() {}
     
     func getAppRootViewController() -> UIViewController {
-        return MainFactory.make(with: .init())
+        return HomeFactory.make(with: .init())
     }
 }
 
