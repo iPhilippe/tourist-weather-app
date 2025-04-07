@@ -36,6 +36,6 @@ final class OpenWeatherMapService {
             throw URLError(.badServerResponse)
         }
         
-        return TouristPointResult(pointName: point, weatherInfo: weatherInfo)
+        return TouristPointResult(point: point, weatherInfo: weatherInfo)
     }
 }

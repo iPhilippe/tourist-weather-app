@@ -7,7 +7,7 @@
 import UIKit
 
 enum HomeRoutingDestination {
-    case weatherDetails
+    case weatherDetails(point: TouristPoint)
 }
 
 final class HomeRouter {
@@ -15,8 +15,8 @@ final class HomeRouter {
     
     func route(to destination: HomeRoutingDestination) {
         switch destination {
-        case .weatherDetails:
-            pushDetailsView()
+        case .weatherDetails(let point):
+            pushDetailsView(point: point)
         }
     }
 }
@@ -24,6 +24,8 @@ final class HomeRouter {
 
 // MARK: Navigation Functions
 extension HomeRouter {
-    private func pushDetailsView() {
+    private func pushDetailsView(point: TouristPoint) {
+        let detailVC = DetailFactory.make(with: .init(point: point))
+        viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

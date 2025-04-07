@@ -7,37 +7,33 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
-    
+
     var body: some View {
         ZStack {
-            if viewModel.isLoading {
-                loadingView
-            } else {
-                content
+            Color.black
+                .ignoresSafeArea()
+            
+            List(TouristPoint.allCases, id: \.self) { point in
+                Button {
+                    viewModel.pushDetailsView(point: point)
+                } label: {
+                    HStack {
+                        Text(point.rawValue)
+                            .foregroundColor(.white)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.horizontal, 2)
+                }
+                .listRowBackground(Color.clear)
             }
-        }.onAppear {
-            viewModel.getWeatherData(local: .vista_chinesa)
+            .scrollContentBackground(.hidden)
+            .listStyle(PlainListStyle())
         }
     }
-    
-    var content: some View {
-        VStack {
-            Text("Hello, World!")
-                .foregroundStyle(.white)
-                .font(.largeTitle)
-        }
-    }
-    
-    var loadingView: some View {
-        ProgressView()
-               .progressViewStyle(CircularProgressViewStyle())
-               .scaleEffect(1.5)
-               .tint(.white)
-    }
-}
-
-#Preview {
-    HomeView(viewModel: HomeViewModel())
 }

@@ -6,8 +6,8 @@
 //
 import Foundation
 
-struct TouristPointResult {
-    let pointName: TouristPoint
+public struct TouristPointResult {
+    let point: TouristPoint
     let weatherInfo: WeatherDetails
 }
 
