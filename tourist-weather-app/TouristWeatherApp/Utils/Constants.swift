@@ -28,11 +28,19 @@ enum TouristPoint: String, CaseIterable {
     func getCoordinates() -> Coord {
         switch self {
         case .vista_chinesa:
-            return Coord(lon: -22.97247824461231, lat: -43.248775059075390)
+            return Coord(lon: -43.24874819456037, lat: -22.971035184485316)
         case .cristo_redentor:
-            return Coord(lon: -22.95049483721863, lat: -43.21009060396723)
+            return Coord(lon: -43.2096094018821, lat: -22.949696884121703)
         case .museu_do_amanha:
-            return Coord(lon: -22.89231146795284, lat: -43.17901989445194)
+            return Coord(lon: -43.179225338570426, lat: -22.891038746036397)
         }
+    }
+}
+
+
+struct constants {
+    
+    struct KEYS {
+        let OPENWEATHERMAP_API_KEY =  "OPENWEATHERMAP_API_KEY"
     }
 }

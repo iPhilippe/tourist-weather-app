@@ -32,14 +32,35 @@ struct Weather: Decodable {
 }
 
 struct Main: Decodable {
-    let temp: Double
-    let feels_like: Double
-    let temp_min: Double
-    let temp_max: Double
+    private let temp: Double
+    private let feels_like: Double
+    private let temp_min: Double
+    private let temp_max: Double
     let pressure: Int
     let humidity: Int
+    
+    var tempCelsius: Double {
+        return convertToCelsius(temp)
+    }
+    
+    var feelsLikeCelsius: Double {
+        return convertToCelsius(feels_like)
+    }
+    
+    var tempMinCelsius: Double {
+        return convertToCelsius(temp_min)
+    }
+    
+    var tempMaxCelsius: Double {
+        return convertToCelsius(temp_max)
+    }
 }
 
 struct Wind: Decodable {
     let speed: Double
+}
+
+//MARK: - Helper Functions
+private func convertToCelsius(_ kelvin: Double) -> Double {
+    return kelvin - 273.15
 }

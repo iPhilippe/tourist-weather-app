@@ -12,7 +12,10 @@ final class OpenWeatherMapService {
     public static let shared = OpenWeatherMapService()
     
     private let baseURL = "https://pro.openweathermap.org/data/2.5/weather"
-    private let apiKey = "E0660FBB222E255C1B5DDC2339C0DCDA"
+    
+    private var apiKey: String {
+        Bundle.main.object(forInfoDictionaryKey: constants.KEYS().OPENWEATHERMAP_API_KEY) as? String ?? ""
+       }
     
     func getWeather(for point: TouristPoint) async throws -> TouristPointResult {
         let coordinates = point.getCoordinates()

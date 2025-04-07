@@ -27,6 +27,8 @@
 		B2D043E02DA358D9003A06A3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D043DF2DA358D9003A06A3 /* DetailView.swift */; };
 		B2D043E22DA36438003A06A3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D043E12DA36437003A06A3 /* DetailViewModel.swift */; };
 		B2D043E42DA36556003A06A3 /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D043E32DA36556003A06A3 /* DetailFactory.swift */; };
+		B2D043E72DA40425003A06A3 /* UIDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D043E62DA40425003A06A3 /* UIDivider.swift */; };
+		B2D043E92DA430BD003A06A3 /* FilterListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D043E82DA430BD003A06A3 /* FilterListContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		B2D043DF2DA358D9003A06A3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B2D043E12DA36437003A06A3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		B2D043E32DA36556003A06A3 /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
+		B2D043E62DA40425003A06A3 /* UIDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDivider.swift; sourceTree = "<group>"; };
+		B2D043E82DA430BD003A06A3 /* FilterListContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -143,6 +147,7 @@
 				B28844A12DA3238100058D1F /* Services */,
 				B288448A2DA1E1FF00058D1F /* Models */,
 				B28844962DA1ED4F00058D1F /* Utils */,
+				B2D043E52DA403E6003A06A3 /* UIComponents */,
 			);
 			path = TouristWeatherApp;
 			sourceTree = "<group>";
@@ -165,7 +170,7 @@
 				B28844342DA1BD5A00058D1F /* SceneDelegate.swift */,
 				B28844842DA1E1F400058D1F /* SceneFactory.swift */,
 				B28844812DA1E1F400058D1F /* Home */,
-				B2D043DA2DA3581C003A06A3 /* PointDetail */,
+				B2D043DA2DA3581C003A06A3 /* TouristPointDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		B28844962DA1ED4F00058D1F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B2D043E82DA430BD003A06A3 /* FilterListContent.swift */,
 				B288449B2DA2E8B400058D1F /* Constants.swift */,
 				B28844972DA1ED5E00058D1F /* BaseViewHostingViewController.swift */,
 			);
@@ -235,7 +241,7 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		B2D043DA2DA3581C003A06A3 /* PointDetail */ = {
+		B2D043DA2DA3581C003A06A3 /* TouristPointDetail */ = {
 			isa = PBXGroup;
 			children = (
 				B2D043E32DA36556003A06A3 /* DetailFactory.swift */,
@@ -243,7 +249,7 @@
 				B2D043DE2DA358A7003A06A3 /* HostingController */,
 				B2D043DD2DA3589F003A06A3 /* Views */,
 			);
-			path = PointDetail;
+			path = TouristPointDetail;
 			sourceTree = "<group>";
 		};
 		B2D043DD2DA3589F003A06A3 /* Views */ = {
@@ -260,6 +266,14 @@
 				B2D043DB2DA35849003A06A3 /* DetailViewHostingController.swift */,
 			);
 			path = HostingController;
+			sourceTree = "<group>";
+		};
+		B2D043E52DA403E6003A06A3 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B2D043E62DA40425003A06A3 /* UIDivider.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +426,7 @@
 				B288448F2DA1EA0200058D1F /* HomeView.swift in Sources */,
 				B288449C2DA2E8B900058D1F /* Constants.swift in Sources */,
 				B2D043DC2DA3584D003A06A3 /* DetailViewHostingController.swift in Sources */,
+				B2D043E72DA40425003A06A3 /* UIDivider.swift in Sources */,
 				B2D043E22DA36438003A06A3 /* DetailViewModel.swift in Sources */,
 				B28844662DA1C43300058D1F /* AppRouter.swift in Sources */,
 				B28844872DA1E1F400058D1F /* HomeViewModel.swift in Sources */,
@@ -425,6 +440,7 @@
 				B2D043E42DA36556003A06A3 /* DetailFactory.swift in Sources */,
 				B288448D2DA1E6C300058D1F /* HomeRouter.swift in Sources */,
 				B2D043E02DA358D9003A06A3 /* DetailView.swift in Sources */,
+				B2D043E92DA430BD003A06A3 /* FilterListContent.swift in Sources */,
 				B28844352DA1BD5A00058D1F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
