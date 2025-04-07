@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22DC84D2DA33078007EE1D0 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DC84C2DA33064007EE1D0 /* OpenWeatherMapService.swift */; };
+		B22DC84F2DA33143007EE1D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B22DC84E2DA33143007EE1D0 /* Alamofire */; };
 		B28844332DA1BD5A00058D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844322DA1BD5A00058D1F /* AppDelegate.swift */; };
 		B28844352DA1BD5A00058D1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844342DA1BD5A00058D1F /* SceneDelegate.swift */; };
 		B288443C2DA1BD5B00058D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B288443B2DA1BD5B00058D1F /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		B28844982DA1ED6B00058D1F /* BaseViewHostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28844972DA1ED5E00058D1F /* BaseViewHostingViewController.swift */; };
 		B288449C2DA2E8B900058D1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288449B2DA2E8B400058D1F /* Constants.swift */; };
 		B288449E2DA2EC6B00058D1F /* TouristPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288449D2DA2EC6B00058D1F /* TouristPoints.swift */; };
-		B28844A02DA2EC8300058D1F /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288449F2DA2EC8300058D1F /* Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B22DC84C2DA33064007EE1D0 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
 		B288442F2DA1BD5A00058D1F /* tourist-weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tourist-weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28844322DA1BD5A00058D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28844342DA1BD5A00058D1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 		B28844972DA1ED5E00058D1F /* BaseViewHostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewHostingViewController.swift; sourceTree = "<group>"; };
 		B288449B2DA2E8B400058D1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B288449D2DA2EC6B00058D1F /* TouristPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristPoints.swift; sourceTree = "<group>"; };
-		B288449F2DA2EC8300058D1F /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22DC84F2DA33143007EE1D0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +205,7 @@
 		B28844A12DA3238100058D1F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B22DC84C2DA33064007EE1D0 /* OpenWeatherMapService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -218,7 +221,6 @@
 		B28844A32DA324F200058D1F /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				B288449F2DA2EC8300058D1F /* Coordinates.swift */,
 				B288449D2DA2EC6B00058D1F /* TouristPoints.swift */,
 			);
 			path = Weather;
@@ -241,6 +243,7 @@
 			);
 			name = "tourist-weather-app";
 			packageProductDependencies = (
+				B22DC84E2DA33143007EE1D0 /* Alamofire */,
 			);
 			productName = "tourist-weather-app";
 			productReference = B288442F2DA1BD5A00058D1F /* tourist-weather-app.app */;
@@ -324,6 +327,9 @@
 			);
 			mainGroup = B28844262DA1BD5A00058D1F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B22DC84B2DA33054007EE1D0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B28844302DA1BD5A00058D1F /* Products */;
 			projectDirPath = "";
@@ -376,7 +382,7 @@
 				B28844952DA1EB0D00058D1F /* HomeViewHostingController.swift in Sources */,
 				B28844982DA1ED6B00058D1F /* BaseViewHostingViewController.swift in Sources */,
 				B28844892DA1E1F400058D1F /* SceneFactory.swift in Sources */,
-				B28844A02DA2EC8300058D1F /* Coordinates.swift in Sources */,
+				B22DC84D2DA33078007EE1D0 /* OpenWeatherMapService.swift in Sources */,
 				B28844332DA1BD5A00058D1F /* AppDelegate.swift in Sources */,
 				B288448D2DA1E6C300058D1F /* HomeRouter.swift in Sources */,
 				B28844352DA1BD5A00058D1F /* SceneDelegate.swift in Sources */,
@@ -737,6 +743,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B22DC84B2DA33054007EE1D0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B22DC84E2DA33143007EE1D0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B22DC84B2DA33054007EE1D0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B28844272DA1BD5A00058D1F /* Project object */;
 }
