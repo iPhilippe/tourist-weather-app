@@ -9,28 +9,32 @@ import XCTest
 @testable import tourist_weather_app
 
 final class tourist_weather_appTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testGetTouristPointsList_onInit_shouldFillTouristPointList() {
+        let viewModel = HomeViewModel()
+        XCTAssertFalse(viewModel.touristPointList.isEmpty, "A lista de pontos turísticos deveria estar preenchida após a inicialização.")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testOnChangeOfSearchText_withMatchingText_shouldFilterList() {
+        let viewModel = HomeViewModel()
+        viewModel.getTouristPointsList()
+        
+        let fullList = viewModel.touristPointList
+        let searchTerm = "Cristo"
+        viewModel.onChangeOfSearchText(text: searchTerm)
+        
+        XCTAssertTrue(viewModel.touristPointList.count < fullList.count, "A lista deveria ter sido filtrada.")
+        XCTAssertTrue(viewModel.touristPointList.contains(where: { $0.rawValue.contains("Cristo") }), "A lista filtrada deveria conter 'Cristo'.")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testOnChangeOfSearchText_withEmptyText_shouldResetList() {
+        let viewModel = HomeViewModel()
+        viewModel.onChangeOfSearchText(text: "lsjdklsjflksjfklsjflsjflskjflksfj")
+        let filteredList = viewModel.touristPointList
+        
+        viewModel.onChangeOfSearchText(text: "")
+        let resetList = viewModel.touristPointList
+        
+        XCTAssertTrue(resetList.count >= filteredList.count, "A lista deveria voltar ao estado original com texto vazio.")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
